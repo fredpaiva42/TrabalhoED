@@ -84,3 +84,9 @@ Ttrainer * searchTrainer(int key, FILE * file){
     }
     return result;
 }
+
+void *search(int trainerKey, int pokeKey, FILE * file){
+    Ttrainer * resultTrainer = searchTrainer(trainerKey, file);
+    Tpoke  * resultPoke = searchPoke(pokeKey, file);
+
+}
