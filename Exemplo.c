@@ -63,3 +63,24 @@ Tpoke *readPoke(FILE *in) {
 
     return poke;
 }
+
+
+// Busca um Pokémon no arquivo
+Tpoke * searchPoke(int key, FILE *file){
+    Tpoke *result = readPoke(file);
+
+    while (result -> pokeID != key && result != NULL)){
+        result = readPoke(file);
+    }
+    return result;
+}
+
+// Busca um Treinador no arquivo
+Ttrainer * searchTrainer(int key, FILE * file){
+    Ttrainer *result = readTrainer(file);
+
+    while(result -> registration != key && result != NULL){
+        result = readTrainer(file);
+    }
+    return result;
+}
